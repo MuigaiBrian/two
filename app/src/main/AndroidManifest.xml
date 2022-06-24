@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.moringaschool.rove">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Rove">
+        <activity
+            android:name=".AcommodationDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.TravelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.TransfersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.RaillistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.AirlistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.TransportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.AccomodationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Ui.ConfirmationActivity"
+            android:exported="false"></activity>
+        <activity
+            android:name=".Ui.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

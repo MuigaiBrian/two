@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/RailTitle"
+        android:layout_width="wrap_content"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/primary_color_1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="Available Rail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RailCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/cardview_default_elevation"
+        android:foregroundGravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RailTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/RailImageDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+            <TextView
+                android:id="@+id/RailArrivalDisplay"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:text="Arrival"
+                app:layout_constraintBottom_toBottomOf="@+id/RailArrivalDeparture"
+                app:layout_constraintStart_toEndOf="@+id/RailArrivalDeparture"
+                app:layout_constraintTop_toTopOf="@+id/RailArrivalDeparture"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/RailAmountDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:textStyle="bold"
+                android:text="Amount"
+                app:layout_constraintBottom_toBottomOf="@+id/RailEstimationDisplay"
+                app:layout_constraintStart_toEndOf="@+id/RailEstimationDisplay"
+                app:layout_constraintTop_toTopOf="@+id/RailEstimationDisplay" />
+
+            <TextView
+                android:id="@+id/RailArrivalDeparture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Departure"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.073"
+                app:layout_constraintStart_toEndOf="@+id/RailImageDisplay"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/RailDepartureData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toEndOf="@+id/RailArrivalDeparture"
+                app:layout_constraintStart_toStartOf="@+id/RailArrivalDeparture"
+                app:layout_constraintTop_toBottomOf="@+id/RailArrivalDeparture" />
+            <TextView
+                android:id="@+id/RailEstimationDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Estimation"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/RailDepartureData"
+                app:layout_constraintStart_toStartOf="@+id/RailDepartureData"
+                app:layout_constraintTop_toBottomOf="@+id/RailDepartureData" />
+
+            <TextView
+                android:id="@+id/RailEstimationData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/RailEstimationDisplay"
+                app:layout_constraintStart_toStartOf="@+id/RailEstimationDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/RailEstimationDisplay" />
+
+            <TextView
+                android:id="@+id/RailArrivalData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/RailArrivalDisplay"
+                app:layout_constraintStart_toStartOf="@+id/RailArrivalDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/RailArrivalDisplay" />
+
+            <TextView
+                android:id="@+id/RailAmountData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/RailAmountDisplay"
+                app:layout_constraintStart_toStartOf="@+id/RailAmountDisplay"
+                app:layout_constraintTop_toBottomOf="@+id/RailAmountDisplay" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
